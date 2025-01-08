@@ -1,0 +1,286 @@
+
+NumPy Ndarray
+Ndarray is the n-dimensional array object defined in the numpy which stores the collection of the similar type of elements. In other words, we can define a ndarray as the collection of the data type (dtype) objects.
+
+The ndarray object can be accessed by using the 0 based indexing. Each element of the Array object contains the same size in the memory.
+
+
+
+import numpy as np 
+a = np.array([1,'2',3]) 
+print(a)
+print(type(a))
+
+
+string----  "upcasting"
+float
+int
+
+
+
+
+
+
+
+
+
+# more than one dimensions 
+import numpy as np 
+
+a = np.array([[1, 2], [3, 4]]) 
+print(a)
+
+'''
+[1 2]
+[3 4]
+'''
+
+
+
+# minimum dimensions 
+import numpy as np 
+
+a = np.array([1, 2, 3,4,5], ndmin = 2) 
+print(a)
+
+
+
+
+# dtype parameter 
+import numpy as np
+ 
+a = np.array([1, 2, 3], dtype = complex)
+print(a)
+
+
+
+
+
+
+
+
+
+
+
+# using array-scalar type 
+import numpy as np 
+dt = np.dtype(np.int32) 
+print(dt)
+
+
+
+
+#int8, int16, int32, int64 can be replaced by equivalent string 'i1', 'i2','i4', etc. 
+import numpy as np 
+
+dt = np.dtype('i4')
+print (dt)
+
+
+
+# using indian notation 
+import numpy as np 
+dt = np.dtype('>i4') 
+print(dt)
+
+
+ndarray.shape
+This array attribute returns a tuple consisting of array dimensions. It can also be used to resize the array.
+
+import numpy as np
+ 
+a = np.array([[1,2,3],[4,5,6]])
+print(a) 
+print(a.shape)
+
+# this resizes the ndarray 
+import numpy as np 
+
+a = np.array([[1,2,3],[4,5,6]]) 
+a.shape = (3,2) 
+print(a)
+
+
+
+NumPy also provides a reshape function to resize an array.
+
+import numpy as np 
+a = np.array([[1,2,3],[4,5,6]]) 
+b = a.reshape(3,2) 
+print(b)
+
+
+Returns a new array of specified size and type, filled with zeros.
+
+
+import numpy as np 
+x = np.zeros((5,2),dtype=int) 
+print(x)
+
+
+
+numpy.ones
+Returns a new array of specified size and type, filled with ones.
+
+# array of five ones. Default dtype is float 
+import numpy as np 
+x = np.ones(5) 
+print(x)
+
+
+import numpy as np 
+x = np.ones([2,2], dtype = int)   #np.eye(2)
+print(x)
+
+
+# now reshape it 
+b = a.reshape(2,4,3) 
+print(b)
+# b is having three dimensions
+
+
+
+
+
+
+
+
+numpy.empty
+It creates an uninitialized array of specified shape and dtype.
+
+The following code shows an example of an empty array.
+
+
+import numpy as np 
+x = np.empty([3,2], dtype = int) 
+print(x)
+
+
+
+# array of five zeros. Default dtype is float 
+import numpy as np 
+x = np.zeros(5) 
+print(x)
+
+
+
+
+numpy.asarray
+This function is similar to numpy.array except for the fact that it has fewer parameters. This routine is useful for converting Python sequence into ndarray.
+
+
+# convert list to ndarray 
+import numpy as np 
+
+x = [1,2,3]
+print(type(x)) 
+a = np.asarray(x) 
+print(type(a))
+print(a)
+
+
+# dtype is provided 
+import numpy as np 
+
+x = [1,2,3]
+a = np.asarray(x, dtype = float) 
+print(a)
+
+
+# ndarray from tuple 
+import numpy as np 
+
+x = (1,2,3) 
+a = np.asarray(x) 
+print(a)
+
+
+
+# ndarray from list of tuples 
+import numpy as np 
+
+x = [(1,2,3),(4,5)] 
+a = np.asarray(x) 
+print(a)
+
+
+
+
+
+
+
+
+
+import numpy as np 
+s = 'Hello World' 
+a = np.frombuffer(s, dtype = 's1') 
+print(a)
+
+
+
+numpy.arange
+This function returns an ndarray object containing evenly spaced values within a given range.
+
+
+# an array of evenly spaced numbers 
+import numpy as np 
+a = np.arange(24) 
+print(a)
+
+
+# this is one dimensional array 
+import numpy as np 
+a = np.arange(24) 
+a.ndim
+
+
+
+
+
+import numpy as np 
+x = np.arange(5, dtype = float)
+print(x)
+
+
+
+# start and stop parameters set 
+import numpy as np 
+x = (np.arange(10,22,2)).reshape(2,3)
+print(x)
+
+
+
+
+a		`	
+numpy.linspace
+This function is similar to arange() function. In this function, instead of step size, the number of evenly spaced values between the interval is specified. 
+
+
+import numpy as np 
+x = np.linspace(10,20,5) 
+print(x)
+
+
+
+# endpoint set to false 
+import numpy as np 
+x = np.linspace(10,20, 5, endpoint = False) 
+print(x)
+
+
+
+# find retstep value 
+import numpy as np 
+
+x = np.linspace(100,500,100, retstep = True) 
+print(x)
+
+
+price
+
+
+
+
+
+
+

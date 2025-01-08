@@ -1,0 +1,216 @@
+Create Matrix in NumPy
+In NumPy, we use the np.array() function to create a matrix. For example,
+
+import numpy as np
+
+# create a 2x2 matrix
+matrix1 = np.array([[1, 3], 
+                   [5, 7]])
+
+print("2x2 Matrix:\n",matrix1)
+
+# create a 3x3  matrix
+matrix2 = np.array([[2, 3, 5],
+             	    [7, 14, 21],
+                    [1, 3, 5]])
+                    
+print("\n3x3 Matrix:\n",matrix2)
+
+
+
+
+
+import numpy as np
+# create a 3x3  matrix
+a = np.array([[2, 3, 5],
+             	    [7, 14, 21],
+                    [1, 3, 5]])
+                    
+print(a)
+print()
+
+
+b = np.array([[2, 3, 5],
+             	    [7, 14, 21],
+                    [1, 3, 5]])
+
+print(b)
+print()
+
+c=a+b
+print(c)
+
+
+[12 23 34
+45 56 67
+67 78 89]
+
+[98 87,76
+78 67 56
+87 67 56]
+
+
+
+
+
+
+
+
+
+Perform Matrix Multiplication in NumPy
+We use the np.dot() function to perform multiplication between two matrices.
+
+Let's see an example.
+
+import numpy as np
+
+# create two matrices
+matrix1 = np.array([[1, 3], 
+             		[5, 7]])
+             
+matrix2 = np.array([[2, 6], 
+                    [4, 8]])
+
+# calculate the dot product of the two matrices
+result = np.dot(matrix1, matrix2)
+
+print("matrix1 x matrix2: \n",result)
+
+
+1 3 		2 6			1*2+3*4    1*6+3*8
+5 7		4 8
+
+in NumPy, we can obtain the transpose of a matrix using the np.transpose() function. For example,
+
+import numpy as np
+
+# create a matrix
+matrix1 = np.array([[1, 3], 
+             		[5, 7]])
+print(matrix)
+print()
+
+# get transpose of matrix1
+result = np.transpose(matrix1)
+
+print(result)
+
+
+
+
+Generate Random Integer in NumPy
+As discussed earlier, we use the random module to work with random numbers in NumPy.
+
+Let's see an example.
+
+import numpy as np
+
+# generate random integer from 0 to 9
+random_number = np.random.randint(0, 10)
+
+print(random_number)
+
+# Output: 7
+
+
+
+
+
+Note: We can also import and use the random module like this:
+
+from numpy import random
+
+random_number = random.randint(0, 10)
+
+print(random_number)
+
+
+
+
+
+Generate Random Float in NumPy
+We can also generate a random floating-point number between 0 and 1. For that we use the random.rand() function. For example,
+
+import numpy as np
+
+# generate random float-point number between 0 and 1
+random_number = np.random.rand()
+
+print(random_number)
+
+# Output: 0.7696638323107154
+
+
+
+
+
+Generate Random Array in NumPy
+NumPy's random module can also be used to generate an array of random numbers. For example,
+
+import numpy as np
+
+# generate 1D array of 5 random integers between 0 and 9
+integer_array = np.random.randint(0, 10, 5)
+
+print("1D Random Integer Array:\n",integer_array)
+
+# generate 1D array of 5 random numbers between 0 and 1
+float_array = np.random.rand(5)
+
+print("\n1D Random Float Array:\n",float_array)
+
+# generate 2D array of shape (3, 4) with random integers
+result = np.random.randint(0, 10, (3,4))
+
+print("\n2D Random Integer Array:\n",result)
+
+
+
+
+
+import numpy as np
+
+# create an array of integers from 1 to 5
+array1 = np.array([1, 2, 3, 4, 5])
+
+# choose a random number from array1
+random_choice = np.random.choice(array1)
+
+print(random_choice)
+
+
+
+
+numpy.hstack() function
+---------------------------
+Horizontally stack numpy arrays using numpy.hstack()
+
+import numpy as np
+x = np.array((3,5,7))
+y = np.array((5,7,9))
+np.hstack((x,y))
+
+
+import numpy as np
+x = np.array([[3], [5], [7]])
+y = np.array([[5], [7], [9]])
+np.hstack((x,y))
+
+
+
+vstack
+----------
+
+
+import numpy as np
+x = np.array([3, 5, 7])
+y = np.array([5, 7, 9])
+np.vstack((x,y))
+
+
+
+
+ import numpy as np
+x = np.array([[3], [5], [7]])
+y = np.array([[5], [7], [9]])
+np.vstack((x,y))
